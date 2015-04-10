@@ -1,0 +1,38 @@
+<!-- Navigation start -->
+    <div pageslide ps-side="left" ps-speed="0.00005" ps-open="checked">
+      <div class="container" style="background-color: white">
+      <ul class="col-sm-12 nav nav-pills nav-stacked">
+        <a ng-click="check()" role="button" class="closeMenu"> <i class="fa fa-close"></i></a>
+        <li ng-click="check()"  ng-repeat="item in leftMenu" class="page-scroll"><a id="scroll-{{item.title}}" href="{{item.url}}" ng-click="scrollTo()">{{item.title}}</a></li>
+        <li ng-click="check()"  ng-repeat="item in rightMenu" class="page-scroll"><a id="scroll-{{item.title}}" href="{{item.url}}" ng-click="scrollTo()">{{item.title}}</a></li>
+      </ul>
+      </div>
+    </div>
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+  <!--</nav>​-->
+
+  <div class="container">
+
+    <ul class="col-md-4 nav navbar-nav hidden-sm hidden-xs leftMenu">
+      <li ng-repeat="item in leftMenu | reverse" class="page-scroll pull-right"><a id="scroll-{{item.title}}" href="{{item.url}}" ng-click="scrollTo()">{{item.title}}</a></li>
+    </ul>
+
+    <a  class="navbar-btn visible-xs visible-sm pull-left col-sm-4 mobileMenu"  ng-click='check()' role="button">
+      <span class="fa fa-bars mobile-button"></span>
+    </a>
+
+    <div>
+      <a class="navbar-brand" href="#/home"> <img width="150px" src="assets/images/itechdom.png" />  </a>
+    </div>
+
+    <ul class="col-md-4 nav navbar-nav hidden-sm hidden-xs rightMenu">
+      <li ng-repeat="item in rightMenu" class="page-scroll pull-right"><a  id="scroll-{{item.title}}" href="{{item.url}}" ng-click="scrollTo()">{{item.title}}</a></li>
+    </ul>
+
+  </div><!-- .container -->
+
+
+
+</nav>

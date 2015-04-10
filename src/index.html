@@ -20,12 +20,27 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body data-color="grey" class="flat">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
+
+    <div id="wrapper">
+
+      <navbar></navbar>
+
+
+      <side-bar>
+        <!-- sidebar items -->
+      </side-bar>
+
+
+      <div ui-view id="content"></div>
+
+
+    </div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

@@ -987,6 +987,19 @@ a:hover {
   font-weight: bold;
   color: #444444;
 }
+
+
+
+/**
+Finished copying till here
+Finished copying till here
+**/
+
+
+
+
+
+
 /* General widget styles */
 .widget-box {
   background: none repeat scroll 0 0 #fafafa;
@@ -2411,11 +2424,11 @@ form .form-group:last-child {
   /*
 	.controls {
 		padding: 10px 10px 10px 0;
-		
+
 		label {
 			margin-top: 6px;
 			margin-right: 10px;
-			
+
 			div[class^="iradio_flat-"], div[class^="icheckbox_flat-"] {
 				vertical-align: middle;
 				margin-top: -3px;
