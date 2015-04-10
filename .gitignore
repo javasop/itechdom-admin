@@ -1,11 +1,5 @@
-bower_components/*
-public/vendor/*
-node_modules/*
-!node_modules/drywall-sendmail
-!node_modules/drywall-slugify
-!node_modules/drywall-workflow
-*.min.js
-*.min.js.map
-*.min.css
-/config.js
-.nodemonignore
+node_modules/
+bower_components/
+.sass-cache/
+.tmp/
+dist/
