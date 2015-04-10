@@ -12,6 +12,9 @@
     width: 50px;
   }
 }
+.row {
+  margin: 0;
+}
 /* Content */
 #content {
   margin-left: 205px;
@@ -513,6 +516,22 @@ body[data-color="grey"].flat .ui-dialog .ui-dialog-titlebar {
     border-right: 0;
   }
 }
+/* Footer */
+#footer {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
+  font-size: 12px;
+  font-weight: 200;
+  padding: 10px 0;
+}
+#footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 
 // injector
 // endinjector
