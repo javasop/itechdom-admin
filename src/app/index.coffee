@@ -10,13 +10,13 @@ angular.module 'itechdomAdmin', ['ui.router', 'ui.bootstrap']
     $stateProvider
       .state "blog",
         url: "/blog",
-        templateUrl: "app/main/blog.html",
+        templateUrl: "app/blog/blog.html",
         controller: "BlogCtrl"
 
     $stateProvider
       .state "user",
         url: "/user",
-        templateUrl: "app/main/main.html",
+        templateUrl: "app/user/user.html",
         controller: "UserCtrl"
 
 
