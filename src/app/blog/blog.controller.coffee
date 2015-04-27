@@ -1,4 +1,4 @@
-angular.module "itechdomAdmin.blog",[]
+angular.module "itechdomAdmin.blog",["itechdomAdmin.blog.service"]
   .config ($stateProvider) ->
     $stateProvider
       .state "blog",
@@ -8,4 +8,6 @@ angular.module "itechdomAdmin.blog",[]
         params: { icon: 'pencil' }
 
 
-  .controller "BlogCtrl", ($scope,$stateParams) ->
+  .controller "BlogCtrl",($scope,$stateParams,blogService) ->
+    blogService.getBlogs().success (data)->
+      $scope.posts = data.posts

@@ -11,3 +11,5 @@ angular.module 'itechdomAdmin', ['ui.router', 'ui.bootstrap','itechdomAdmin.blog
 
     $urlRouterProvider.otherwise '/'
 
+  .constant("host","http://www.itechdom.com/")
+
