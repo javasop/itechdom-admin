@@ -4,21 +4,27 @@ angular.module "itechdomAdmin"
   restrict: 'E'
   link: (scope, element, attrs) ->
 
-  controller: ($rootScope, $scope,$anchorScroll,$location,$timeout,sidebarService) ->
+  controller: ($rootScope, $scope,$location,sidebarService,$state) ->
 
     $scope.menu = sidebarService.menu
 
     $scope.$on '$stateChangeSuccess',(event, toState, toParams, fromState, fromParams)->
       to = toState.url
       for value,index in $scope.menu
-        if(to == value.trueUrl)
+        if(to == value.url)
           value.checked = true
         else
           value.checked = false
 
+    #format urls from ui router
+    uiUrls = $state.get()
 
-    $scope.menu.push({"title":"Home","url":"/#/","trueUrl":"/"})
-    $scope.menu.push({"title":"Blog","url":"/#/blog","trueUrl":"/blog"})
+    for value,index in uiUrls
+      if !value.abstract
+        if value.params
+          value.icon = value.params.icon
+        value.trueUrl = "/#"+value.url
+        $scope.menu.push(value)
 
 
 
