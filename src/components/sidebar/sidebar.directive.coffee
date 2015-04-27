@@ -4,34 +4,18 @@ angular.module "itechdomAdmin"
   restrict: 'E'
   link: (scope, element, attrs) ->
 
-  controller: ($rootScope, $scope,$anchorScroll,$location,$timeout) ->
+  controller: ($rootScope, $scope,$anchorScroll,$location,$timeout,sidebarService) ->
 
-
-    $scope.$on '$stateChangeSuccess',(event, toState, toParams, fromState, fromParams)->
-      #if it's home and there's hash, scroll to it
-      if toState.url == "/" and $location.hash()
-        $timeout(()->
-          $anchorScroll()
-        , 100)
-
-    $scope.scrollTo = ()->
-      $anchorScroll()
+    $scope.menu = sidebarService.menu
 
     $scope.checked = false
 
     $scope.check = ()->
       $scope.checked = !$scope.checked
 
-    $scope.leftMenu = [
-      {"title":"Home","url":"/"},
-      {"title":"Services","url":"/#/#Services"}
-      {"title":"About Us","url":"/#/about"}
-    ]
-    $scope.rightMenu = [
-      {"title":"Portfolio","url":"/#/#Portfolio"},
-      {"title":"Contact","url":"/#/#Contact"}
-      {"title":"Blog","url":"/#/blog"}
-    ]
+    $scope.menu.push({"title":"Home","url":"/"})
+    $scope.menu.push({"title":"Blog","url":"/blog"})
+
 
 
 )
