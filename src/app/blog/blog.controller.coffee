@@ -7,7 +7,6 @@ angular.module "itechdomAdmin.blog",["itechdomAdmin.blog.service"]
         controller: "BlogCtrl"
         params: { icon: 'pencil' }
 
-
   .controller "BlogCtrl",($scope,$stateParams,blogService) ->
     blogService.getBlogs().success (data)->
       $scope.posts = data.posts
