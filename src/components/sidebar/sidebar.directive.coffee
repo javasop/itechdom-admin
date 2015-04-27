@@ -8,13 +8,17 @@ angular.module "itechdomAdmin"
 
     $scope.menu = sidebarService.menu
 
-    $scope.checked = false
+    $scope.$on '$stateChangeSuccess',(event, toState, toParams, fromState, fromParams)->
+      to = toState.url
+      for value,index in $scope.menu
+        if(to == value.trueUrl)
+          value.checked = true
+        else
+          value.checked = false
 
-    $scope.check = ()->
-      $scope.checked = !$scope.checked
 
-    $scope.menu.push({"title":"Home","url":"/"})
-    $scope.menu.push({"title":"Blog","url":"/blog"})
+    $scope.menu.push({"title":"Home","url":"/#/","trueUrl":"/"})
+    $scope.menu.push({"title":"Blog","url":"/#/blog","trueUrl":"/blog"})
 
 
 

@@ -1,11 +1,3 @@
-<ul>
-  <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>{{item.title}}</span></a></li>
-  <!--<li class="submenu">-->
-    <!--<a href="#"><i class="fa fa-flask"></i> <span>UI Lab</span> <i class="arrow fa fa-chevron-right"></i></a>-->
-    <!--<ul>-->
-      <!--<li><a href="interface.html">Interface Elements</a></li>-->
-      <!--<li><a href="jquery-ui.html">jQuery UI</a></li>-->
-      <!--<li><a href="buttons.html">Buttons &amp; icons</a></li>-->
-    <!--</ul>-->
-  <!--</li>-->
-  </ul>
+<li ng-class="{active:item.checked}">
+    <a ng-href="{{item.url}}"><i class="fa fa-home"></i>
+      <span>{{item.title}}</span></a></li>
