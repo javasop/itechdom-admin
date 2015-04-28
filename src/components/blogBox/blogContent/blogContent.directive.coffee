@@ -3,7 +3,8 @@ angular.module "itechdomAdmin"
   templateUrl: 'components/blogBox/blogContent/blogContent.html'
   restrict: 'E'
   transclude:true
-  link: (scope, element, attrs) ->
+  require:"^blogBox"
+  link: (scope, element, attrs,blogBoxCtrl) ->
 
   controller: ($rootScope, $scope,blogService) ->
 

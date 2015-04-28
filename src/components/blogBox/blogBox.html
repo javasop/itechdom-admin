@@ -1,8 +1,14 @@
 <div class="widget-messages">
   <div class="nopadding">
     <div class="tab-content">
-      <div id="inbox-tab" class="tab-pane active checklist">
-        <ng-transclude></ng-transclude>
+      <div id="inbox-tab row" class="tab-pane active checklist">
+
+        <ul class="messages-list {{messageWidth}}">
+          <blog-item post="post" ng-repeat="post in posts"></blog-item>
+        </ul>
+        
+        <blog-content class="col-md-9"></blog-content>
+
       </div>
     </div>
   </div>

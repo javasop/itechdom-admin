@@ -4,7 +4,7 @@ angular.module "itechdomAdmin"
   restrict: 'E'
   link: (scope, element, attrs) ->
 
-  controller: ($rootScope, $scope,$location,sidebarService,$state) ->
+  controller: ($rootScope, $scope,$location,sidebarService,$state,$filter) ->
 
     $scope.menu = sidebarService.menu
 
@@ -25,6 +25,11 @@ angular.module "itechdomAdmin"
           value.icon = value.params.icon
         value.trueUrl = "/#"+value.url
         $scope.menu.push(value)
+
+    $scope.menu = $filter('orderBy')($scope.menu, (route)->
+      #sort by home, to make it appear first
+      return route.name == "home"
+    ,true)
 
 
 

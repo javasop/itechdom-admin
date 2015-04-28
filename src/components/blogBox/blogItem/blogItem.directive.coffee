@@ -6,7 +6,9 @@ angular.module "itechdomAdmin"
   scope:{
     post:"=post"
   }
-  link: (scope, element, attrs) ->
+  require:"^blogBox"
+  link: (scope, element, attrs,blogBoxCtrl) ->
+    scope.toggleMessageWidth = blogBoxCtrl.toggleMessageWidth
 
   controller: ($rootScope, $scope,blogService,$timeout) ->
 
@@ -14,6 +16,7 @@ angular.module "itechdomAdmin"
 
     $scope.selectPost = ()->
       $scope.data["currentPost"] = $scope.post
-
+      #minimize the width of the
+      $scope.toggleMessageWidth()
 
 )
