@@ -8,6 +8,16 @@ angular.module "itechdomAdmin"
   }
   link: (scope, element, attrs) ->
 
-  controller: ($rootScope, $scope) ->
+  controller: ($rootScope, $scope,blogService,$timeout) ->
+
+    $scope.data = blogService.data
+
+    $scope.selectPost = ()->
+      $scope.data["currentPost"] = $scope.post
+
+    $scope.$watch('data.currentPost',(newVal,oldVal)->
+      console.log newVal
+    )
+
 
 )

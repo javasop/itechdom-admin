@@ -5,6 +5,13 @@ angular.module "itechdomAdmin"
   transclude:true
   link: (scope, element, attrs) ->
 
-  controller: ($rootScope, $scope) ->
+  controller: ($rootScope, $scope,blogService) ->
+
+    $scope.data = blogService.data
+
+    $scope.$watch('data.currentPost',(newVal,oldVal)->
+      console.log newVal
+    )
+
 
 )

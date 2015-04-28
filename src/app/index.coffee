@@ -1,4 +1,4 @@
-angular.module 'itechdomAdmin', ['ui.router', 'ui.bootstrap','itechdomAdmin.blog','itechdomAdmin.user']
+angular.module 'itechdomAdmin', ['ui.router', 'ui.bootstrap','itechdomAdmin.blog','itechdomAdmin.user','textAngular']
   .config ($stateProvider, $urlRouterProvider) ->
 
     $stateProvider
