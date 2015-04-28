@@ -9,9 +9,5 @@ angular.module "itechdomAdmin"
 
     $scope.data = blogService.data
 
-    $scope.$watch('data.currentPost',(newVal,oldVal)->
-      console.log newVal
-    )
-
 
 )

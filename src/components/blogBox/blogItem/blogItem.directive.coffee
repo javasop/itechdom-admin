@@ -15,9 +15,5 @@ angular.module "itechdomAdmin"
     $scope.selectPost = ()->
       $scope.data["currentPost"] = $scope.post
 
-    $scope.$watch('data.currentPost',(newVal,oldVal)->
-      console.log newVal
-    )
-
 
 )
